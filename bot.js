@@ -7,8 +7,10 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-    msg.reply('Pong!');
+    msg.reply('Pong');
   }
 });
 
-client.login('token');
+
+// THIS MUST BE THIS WAY
+client.login(process.env.BOT_TOKEN);
